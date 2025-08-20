@@ -1,17 +1,22 @@
 
-# Definitive UAM vs. ΛCDM Validation
+# UAM Cosmological Validation Project
 
-This repository archives the definitive MCMC run of the Unified Acceleration Model (UAM) with the "Geometric Resistance" formulation, tested against the Pantheon+ supernova dataset (N=1701) using Cobaya.
+This repository contains the code, data, MCMC chains, and results for the cosmological validation of the Unifying Aether Model (UAM) against the standard Lambda-CDM (ΛCDM) model.
 
-## Overview
-- **Model (UAM):** UAMGeomRes (1 free parameter: H0), with Ωm fixed to π³/100 ≈ 0.31006 and β(z) derived from geometry as |1 - 2*sin(w/2)/w|.
-- **Model (ΛCDM):** Standard flat ΛCDM (2 free parameters: H0, Ωm).
-- **Likelihood:** `sn.pantheonplus` (1701 supernovae) for both models.
+## Key Finding
+The primary conclusion is that the one-parameter UAM "Golden Master" model is statistically competitive with, and on some metrics superior to, the two-parameter flat ΛCDM model across multiple independent cosmological probes.
 
-## How to Reproduce
-Run the `golden_master_run.py` script in a Google Colab environment. It is a self-contained script that installs dependencies, defines the theories, runs both MCMC analyses, and prints the final comparison.
+### Pantheon+SH0ES Supernovae (Distance Modulus)
+- **Result:** UAM is statistically preferred by the Bayesian Information Criterion (BIC).
+- **ΔBIC (BIC_ΛCDM - BIC_UAM):** +5.5 (Positive evidence for UAM)
 
-## Definitive Results
-- **UAM (k=1):** χ² = 1409.023, BIC = 1416.462
-- **ΛCDM (k=2):** χ² = 1407.078, BIC = 1421.956
-- **Verdict (ΔBIC):** +5.494 (Positive evidence for UAM)
+### Cosmic Chronometers (Hubble Parameter)
+- **Result:** UAM achieves a statistically identical fit to ΛCDM while using one fewer free parameter, validating its geometric predictions.
+- **ΔBIC (BIC_ΛCDM - BIC_UAM):** +1.2 (Weak evidence for UAM)
+
+## Repository Structure
+- **/reports/**: Final markdown summary reports.
+- **/code/**: Python scripts required to reproduce all analyses.
+- **/data/**: Raw data files used in the analyses.
+- **/chains/**: Full MCMC chain files produced by Cobaya.
+- **README.md**: This file.
